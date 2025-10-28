@@ -1,0 +1,21 @@
+print("Calc-X")
+print("Welcome to Calc-X")
+print("Calc-X is a platform in which you can either add, subtract, divide or multiply any two whole numbrs")
+print("Lets start of with your details")
+name=str(input("Enter your name here:  "))
+print("Hello", name)
+print("___________________________________________________________________________________")
+print("Now onto the numbers")
+print("Enter your first operating number")
+num1=int(input("Enter the first number that you would like to operate:  "))
+print("Now for your second operating number")
+num2=int(input("Enter your second operating number"))
+print("___________________________________________________________________________________")
+print("What operator would you like to use to operate your two numbers")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+
+

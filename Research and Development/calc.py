@@ -16,6 +16,37 @@ print("1. Addition")
 print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
+choice = input("Enter your choice. 1/2/3/4")
+if choice == ("1"):
+    result = (num1+num2)
+    print("The answer to", num1, "+", num2, "is", result)
+elif choice == ("2"):
+    result2 = (num1-num2)
+    print("The answer to", num1, "-", num2, "is", result2)
+elif choice == ("3"):
+    result3 = (num1*num2)
+    print("The answer to", num1, "x", num2,"is", result3)
+elif choice == ("4"):
+    result4 = (num1/num2)
+    print("The answer to", num1, "÷", num2, "is", result4)
+
+
+print("Now would you like to get the answer for all, addition, subtraction, multiplication, and division")
+print("Yes")
+print("No")
+choice2 = input("Enter your choice exactly as given. Yes/No")
+if choice2 == ("Yes"):
+    print("Addition",result)
+    print("Subtraction",result2)
+    print("Multiplication",result3)
+    print("Division", result4)
+else:
+    print("Thank you for using Calc-X")
+    print("Hope you use Calc-X again")
+
+
+    
+    
 
 
 

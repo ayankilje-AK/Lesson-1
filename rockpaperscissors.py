@@ -24,7 +24,7 @@ while True:
             print("Scissor cuts through paper. Player 1 Wins!")
         else:
             print("Rock smashes scissor. Player 2 Wins!")
-    play_again = input("Do you want to Play Again? Yes or No")
+    play_again = input("Do you want to Play Again? Yes or No: ")
     if play_again != ("Yes"):
         break
     

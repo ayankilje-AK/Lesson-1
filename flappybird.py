@@ -15,6 +15,9 @@ ground_scroll = 0
 scroll_speed = 4
 flying = False
 game_over = False
+pipe_gap = 150
+pipe_frequency = 1500 #Milliseconds
+last_pipe = pygame.time.get_ticks() - pipe_frequency
 
 
 #Load images
@@ -83,9 +86,12 @@ class Pipe(pygame.sprite.Sprite):
         # Position 1 is from the top, -1 is from the bottom
         if position == 1:
             self.image = pygame.transform.flip(self.image, False, True)
-            self.rect.bottomleft = [x, y]
+            self.rect.bottomleft = [x, y - int(pipe_gap / 2)]
         if position == -1:
-            self.rect.topleft = [ x, y]
+            self.rect.topleft = [ x, y + int(pipe_gap / 2)]
+
+    def update(self):
+        self.rect.x -= scroll_speed
         
 
 
@@ -129,7 +135,17 @@ while run:
 
 
     
-    if game_over == False:
+    if game_over == False and flying == True:
+
+        #Generate new pipes
+        time_now = pygame.time.get_ticks()
+        if time_now - last_pipe > pipe_frequency:
+            btm_pipe = Pipe(screen_width, int(screen_height / 2), -1)
+            top_pipe = Pipe(screen_width, int(screen_height / 2), 1)
+            pipe_group.add(btm_pipe)
+            pipe_group.add(top_pipe)
+            last_pipe = time_now
+ 
         #Draw and scroll the ground
         ground_scroll -= scroll_speed
         if abs(ground_scroll) > 35:

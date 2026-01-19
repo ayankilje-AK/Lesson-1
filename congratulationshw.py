@@ -1,0 +1,5 @@
+word1=("Wishing")
+word2=(" You a")
+word3=(" Happy")
+word4=(" Birthday")
+print(word1+word2+word3+word4)

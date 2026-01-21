@@ -22,6 +22,8 @@ scroll_speed = 4
 
 bg = pygame.image.load('bg.png')
 ground_img = pygame.image.load('ground.png')
+
+
 run = True
 while run:
 

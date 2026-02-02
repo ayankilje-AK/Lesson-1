@@ -1,6 +1,6 @@
 ''' Will make the board using dictionary in which keys will be location(top_left, mid_left, etc.) and initially its values will be empty space and after every move, we will change the valus according to the player's choice of move '''
 
-the_board = {'7':' ', '8:':' ', '9':' ',
+the_board = {'7':' ', '8':' ', '9':' ',
              '4':' ', '5':' ', '6':' ',
              '1':' ', '2':' ', '3':' '}
 
@@ -82,7 +82,7 @@ def game():
         else:
             turn = 'X'
         
-    restart = input("Would you like to play agein. y/n")
+    restart = input("Would you like to play again. y/n")
     if restart == "y" or restart == "Y":
         for key in board_keys:
             the_board[key] = " "

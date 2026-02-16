@@ -8,4 +8,3 @@ class Point:
 
 obj1 = Point(2, 3)
 print(obj1)
-

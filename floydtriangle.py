@@ -8,3 +8,5 @@ for i in range(1, rows + 1):
         number = number + 1
 
     print()
+
+    
